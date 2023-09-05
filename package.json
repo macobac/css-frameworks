@@ -16,5 +16,11 @@
     "bootstrap"
   ],
   "author": "Sarah H",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.1"
+  },
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
 }
