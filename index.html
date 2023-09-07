@@ -10,28 +10,34 @@
 
 <body>
     <div class="container p-5">
-        <div class="container">
-            <div>
-                <img src="images/purplelogo.png" alt="purple app logo" class="img-fluid pe-5 ps-5 mx-auto d-block">
-                <p class="text-primary text-center pt-3 pb-4">people meet purple</p>
+        <div class="row border">
+            <div class="col-md p-5">
+                <div>
+                    <img src="images/purplelogo.png" alt="purple app logo" class="img-fluid pe-5 ps-5 mx-auto d-block">
+                    <p class="text-primary text-center pt-3 pb-4">people meet purple</p>
+                </div>
+                <form action="#">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control border-secondary" id="username"
+                            placeholder="purplelover">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control border-secondary" id="password">
+                        <p class="text-end"><a href="#" class="form-text link-dark">Forgot Password?</a></p>
+                    </div>
+                    <div class="mb-5 ">
+                        <button type="submit" class="btn btn-outline-secondary w-100 fw-bold text-dark">Log in</button>
+                        <p class="text-end"><a href="#" class="form-text link-dark">Trouble logging in?</a></p>
+                    </div>
+                    <hr>
+                    <p class="text-center">Dont have an account yet? <a href="#" class="fw-bold link-dark">Sign Up</a>
+                    </p>
+                </form>
             </div>
-            <form action="#">
-                <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control border-secondary" id="username" placeholder="purplelover">
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control border-secondary" id="password">
-                    <p class="text-end"><a href="#" class="form-text link-dark">Forgot Password?</a></p>
-                </div>
-                <div class="mb-5 ">
-                    <button type="submit" class="btn btn-outline-secondary w-100 fw-bold text-dark">Log in</button>
-                    <p class="text-end"><a href="#" class="form-text link-dark">Trouble logging in?</a></p>
-                </div>
-                <hr>
-                <p class="text-center">Dont have an account yet? <a href="#" class="fw-bold link-dark">Sign Up</a></p>
-            </form>
+            <div class="col hide-on-small-device">
+            </div>
         </div>
     </div>
 </body>
