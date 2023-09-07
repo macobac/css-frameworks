@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
 </head>
+
 <body>
-    <button class="btn btn-primary">heihei</button>
+    <div class="container p-5">
+        <form action="#">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control border-secondary" id="username" placeholder="purplelover">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control border-secondary" id="password">
+                <p class="text-end"><a href="#" class="form-text text-dark">Forgot Password?</a></p>
+            </div>
+            <div class="mb-5 ">
+                <button type="submit" class="btn btn-outline-secondary w-100 fw-bold text-dark">Log in</button>
+                <p class="text-end"><a href="#" class="form-text text-dark">Trouble logging in?</a></p>
+            </div>
+            <hr>
+            <p class="text-center">Dont have an account yet? <a href="#" class="fw-bold text-dark">Sign Up</a></p>
+        </form>
+    </div>
 </body>
+
 </html>
