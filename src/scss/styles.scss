@@ -1,7 +1,13 @@
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-
+.hide-on-small-device {
+    background-image: url("/images/circles-bg.png");
+    width: 100%;
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 @media (max-width: 767px) {
     .hide-on-small-device {
