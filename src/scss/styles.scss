@@ -1,6 +1,8 @@
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+
+/*Circles with three shades of purple as div background for index (authentication) page. only visible from 768px and up*/
 .hide-on-small-device {
     background-image: url("/images/circles-bg.png");
     width: 100%;
