@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purple app</title>
+    <title>Purple app - Log in</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
 </head>
 
@@ -16,15 +16,15 @@
                     <img src="images/purplelogo.png" alt="purple app logo" class="img-fluid pe-5 ps-5 mx-auto d-block logo-img">
                     <p class="text-primary text-center pt-3 pb-4">people meet purple</p>
                 </div>
-                <form action="/profile.html">
+                <form action="/profile.html" method="post" id="loginform">
                     <div class="mb-3">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control border-secondary" id="username"
-                            placeholder="purplelover">
+                        <label for="useremail" class="form-label">Email</label>
+                        <input type="email" class="form-control border-secondary" id="useremail"
+                            placeholder="purple@gmail.com">
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control border-secondary" id="password">
+                        <label for="loginpassword" class="form-label">Password</label>
+                        <input type="password" class="form-control border-secondary" id="loginpassword">
                         <p class="text-end"><a href="#" class="form-text link-dark">Forgot Password?</a></p>
                     </div>
                     <div class="mb-5 ">
@@ -32,7 +32,7 @@
                         <p class="text-end"><a href="#" class="form-text link-dark">Trouble logging in?</a></p>
                     </div>
                     <hr>
-                    <p class="text-center">Dont have an account yet? <a href="feed.html" class="fw-bold link-dark">Sign Up</a>
+                    <p class="text-center">Dont have an account yet? <a href="register.html" class="fw-bold link-dark">Sign Up</a>
                     </p>
                 </form>
             </div>
@@ -40,6 +40,7 @@
             </div>
         </div>
     </div>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
