@@ -1,3 +1,5 @@
+//her skal det bare importeres for å registrere ny user. alt jeg trenger for å registrere useren skal utføres her
+
 const API_BASE_URL = 'https://api.noroff.dev/api/v1';
 //End-points:
 //Register:  /social/auth/register
