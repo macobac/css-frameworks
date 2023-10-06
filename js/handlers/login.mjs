@@ -17,7 +17,7 @@
  * //required due to API
  * ```
  */
-  export async function loginUser(url, userData) {
+   export async function loginUser(url, userData) {
     try {
         const postData = {
             method: 'POST',
