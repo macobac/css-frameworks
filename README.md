@@ -2,10 +2,11 @@
 Course assignment on bootstrap
 
 //Done:
+
+//Todo:
 - working login
 - working reg
 
-//Todo:
 - success msg after reg, and then link to login
 - fix design on reg pg
 - go to "own" profile after logging in
