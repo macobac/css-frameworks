@@ -1,28 +1,13 @@
-//her skal det bare importeres for å logge inn user. alt jeg trenger for å logge inn useren også skal det utføres her
-
 import { API_BASE_URL } from "../api/apiLinks.mjs";
-import { loginUser } from "./loginUserApi.mjs";
+import { loginUser } from "../handlers/login.mjs";
 
 
-/*const loginForm = document.querySelector("#loginform");
+const loginForm = document.querySelector("#loginform");
 const loginFormAction = loginForm.getAttribute('action');
 
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const userEmail = document.querySelector("#useremail").value;
-    const userPassword = document.querySelector("#loginpassword").value;
-    const userToLogin = {
-        email: `${userEmail}`,
-        password: `${userPassword}`,
-    }
-    const loginUrl = `${API_BASE_URL}/social/auth/login`;
-    loginUser(loginUrl, userToLogin);
-    loginForm.submit;
-})
-*/
 
 export function loginUser() {
-    const loginForm = document.querySelector("#loginform");
+
     loginForm.addEventListener("submit", (e) => {
       e.preventDefault();
       const formData = e.target;
@@ -34,7 +19,8 @@ export function loginUser() {
       };
       const loginUrl = `${API_BASE_URL}/social/auth/login`;
       loginUser(loginUrl, userToLogin);
-    });
+    });    
+    const loginForm = document.querySelector("#loginform");
   }
 
 // token request

@@ -1,3 +1,2 @@
-import { API_REG_URL } from "./auth/apiLinks.mjs";
-
-console.log(API_REG_URL)
+import { loginUser } from "./handlers/login.mjs";
+import { regUser } from "./handlers/register.mjs";
