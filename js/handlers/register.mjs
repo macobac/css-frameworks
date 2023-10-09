@@ -18,7 +18,7 @@
  * //required due to API
  * ```
  */
-export async function regUser(url, userData) {
+export async function register(url, userData) {
     try {
         const postData = {
             method: 'POST',
