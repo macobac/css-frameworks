@@ -29,11 +29,13 @@ export async function register(url, userData) {
         };
         const response = await fetch(url, postData);
         const json = await response.json();
+        const action = form.action;
         if (response.ok) {
-            window.location.replace(regFormAction);
+            window.location.replace(action);
         } else {
             console.log("smth went wrong");
         }
+        return json;
     } catch (error) {
         console.log(error);
     }
