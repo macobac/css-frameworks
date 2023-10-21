@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple app - Register your account</title>
+    <link rel="stylesheet" href="/dist/css/styles.css">
+</head>
+
+<body>
+    <div class="container p-5">
+        <div class="row border border-2 rounded-3">
+            <div class="col-md p-5">
+                <div>
+                    <img src="images/purplelogo.png" alt="purple app logo" class="img-fluid pe-5 ps-5 mx-auto d-block logo-img">
+                    <p class="text-primary text-center pt-3 pb-4">people meet purple</p>
+                </div>
+                <form action="/index.html" method="post" id="regform">
+                    <div class="mb-3">
+                        <label for="regusername" class="form-label">Username</label>
+                        <input type="text" class="form-control border-secondary" id="regusername"
+                            placeholder="purplelover">
+                    </div>
+                    <div class="mb-3">
+                        <label for="regemail" class="form-label">Email</label>
+                        <input type="email" class="form-control border-secondary" id="regemail"
+                            placeholder="purple@gmail.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="regpassword" class="form-label">Password</label>
+                        <input type="password" class="form-control border-secondary" id="regpassword">
+                    </div>
+                    <div class="mb-5 ">
+                        <button type="submit" class="btn btn-outline-secondary w-100 fw-bold text-dark">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col hide-on-small-device d-none d-md-block">
+            </div>
+        </div>
+    </div>
+    <script src="js/auth/registerUser.mjs" type="module"></script>
+</body>
+
+</html>
