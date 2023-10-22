@@ -18,6 +18,11 @@ export default async function registerUser(url, userData) {
         const response = await fetch(url, postData);
         const json = await response.json();
         console.log(json);
+        const action = document.querySelector("#regform");
+        const actionAtt = getAttribute(action);
+        if (response.ok) {
+            window.location.replace(actionAtt);
+        }
     } catch (error) {
         console.log(error);
     }
