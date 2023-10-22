@@ -1,10 +1,15 @@
 export default async function getWithToken(url) {
     try {
-        console.log(url)
-        const response = await fetch(url);
-        console.log(response);
+        const token = localStorage.getItem('accessToken');
+        const fetchOptions = {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+            },
+        };
+        const response = await fetch(url, fetchOptions);
         const json = await response.json();
-        console.log(json);
     } catch (error) {
         console.log(error);
     }
