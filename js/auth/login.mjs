@@ -5,7 +5,7 @@ import loginUser from "../auth/loginUser.mjs";
 const loginBtn = document.querySelector('.loginbtn');
 
 
-loginBtn.addEventListener('submit', (event) => {
+loginBtn.addEventListener('click', (event) => {
     event.preventDefault();
     loginUser(loginUrl, userToLogin)
 })

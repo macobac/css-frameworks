@@ -4,7 +4,7 @@ import registerUser from "../auth/registerUser.mjs";
 
 const regBtn = document.querySelector('.regbtn');
 
-regBtn.addEventListener('submit', (event) => {
+regBtn.addEventListener('click', (event) => {
     event.preventDefault();
     registerUser(registerUrl, userToReg);
 })
