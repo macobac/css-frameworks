@@ -3,7 +3,7 @@
  * @param {string} url 
  * @param {any} userData
  * ```js
- * registerUser(registerUrl, userToRegister);
+ * registerUser(registerUrl, userToReg);
  * ``` 
  */
 export default async function registerUser(url, userData) {
