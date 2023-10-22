@@ -1,5 +1,6 @@
-//get this data from login pg form
+import { loginEmail, loginPassword } from "./formData.mjs";
+
 export const userToLogin = {
-    "email": 'mac1@noroff.no',
-    "password": 'mac12345',
+    "email": loginEmail,
+    "password": loginPassword,
 };

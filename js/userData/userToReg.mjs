@@ -1,6 +1,7 @@
-//get this data from register pg form
+import { regName, regEmail, regPassword } from "./formData.mjs";
+
 export const userToReg = {
-    "name": 'mac1',
-    "email": 'mac1@noroff.no',
-    "password": 'mac12345',
+    "name": regName,
+    "email": regEmail,
+    "password": regPassword,
 };
