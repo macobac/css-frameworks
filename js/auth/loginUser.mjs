@@ -19,10 +19,10 @@ export default async function loginUser(url, userData) {
         const json = await response.json();
         const accessToken = json.accessToken;
         localStorage.setItem('accessToken', accessToken)
-        const action = document.querySelector("#loginform");
-        const actionAtt = getAttribute(action);
+        const formEl = document.querySelector("#loginform");
+        const attribute = formEl.getAttribute("action");
         if (response.ok) {
-            window.location.replace(actionAtt);
+            window.location.replace(attribute);
         }
     } catch (error) {
         console.log(error);
