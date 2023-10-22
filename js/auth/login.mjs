@@ -5,12 +5,6 @@ import { loginEmail } from "../userData/formData.mjs";
 
 const loginBtn = document.querySelector('loginbtn');
 
-function plswork() {
-    loginBtn.addEventListener('click', function() {
-    console.log(loginEmail);
+loginEmail.addEventListener('input', function() {
+    console.log(loginEmail.value);
 })
-
-}
-
-
-plswork()
