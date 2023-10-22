@@ -19,9 +19,9 @@ export default async function registerUser(url, userData) {
         const json = await response.json();
         console.log(json);
         const action = document.querySelector("#regform");
-        const actionAtt = getAttribute(action);
+        const attribute = action.getAttribute("action");
         if (response.ok) {
-            window.location.replace(actionAtt);
+            window.location.replace(attribute);
         }
     } catch (error) {
         console.log(error);
