@@ -20,8 +20,8 @@ export default async function registerUser(url, userData) {
         console.log(json);
         const formEl = document.querySelector("#regform");
         const attribute = formEl.getAttribute("action");
-        if (response.ok) {
-            window.location.replace(attribute);
+        if (response && response.ok) {
+            window.location.href = attribute;
         }
     } catch (error) {
         console.log(error);

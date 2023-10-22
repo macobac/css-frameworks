@@ -21,8 +21,8 @@ export default async function loginUser(url, userData) {
         localStorage.setItem('accessToken', accessToken)
         const formEl = document.querySelector("#loginform");
         const attribute = formEl.getAttribute("action");
-        if (response.ok) {
-            window.location.replace(attribute);
+        if (response && response.ok) {
+            window.location.href = attribute;
         }
     } catch (error) {
         console.log(error);
