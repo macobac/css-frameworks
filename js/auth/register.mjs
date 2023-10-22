@@ -1,4 +1,11 @@
-
+/**
+ * API call that registers user
+ * @param {string} url 
+ * @param {any} userData
+ * ```js
+ * registerUser(registerUrl, userToRegister);
+ * ``` 
+ */
 export default async function registerUser(url, userData) {
     try {
         const postData = {
