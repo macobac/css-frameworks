@@ -1,4 +1,4 @@
-import { regName, regEmail, regPassword } from "./userData/formData.mjs";
+import { regName, regEmail, regPassword } from "../userData/formData.mjs";
 
 export const userToReg = {
     "name": regName,
