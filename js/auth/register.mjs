@@ -2,9 +2,9 @@ import { registerUrl } from "../auth/apiConst.mjs";
 import { userToReg } from "../userData/userToReg.mjs";
 import registerUser from "../auth/registerUser.mjs";
 
-const regBtn = document.querySelector('.regbtn');
+const regForm = document.querySelector('#regform');
 
-regBtn.addEventListener('click', (event) => {
+regForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     registerUser(registerUrl, userToReg);
 })
