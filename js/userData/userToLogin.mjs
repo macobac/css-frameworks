@@ -1,6 +1,10 @@
-import { loginEmail, loginPassword } from "../userData/formData.mjs";
+export default function userToLogin() {
+    const loginEmail = document.querySelector('#useremail');
+    const loginPassword = document.querySelector('#loginpassword');
 
-export const userToLogin = {
-    "email": loginEmail.value,
-    "password": loginPassword.value,
-};
+    const user = {
+        email: loginEmail.value,
+        password: loginPassword.value
+    };
+    return user;
+}

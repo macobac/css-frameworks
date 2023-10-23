@@ -10,6 +10,7 @@ export default async function getWithToken(url) {
         };
         const response = await fetch(url, fetchOptions);
         const json = await response.json();
+        return json;
     } catch (error) {
         console.log(error);
     }

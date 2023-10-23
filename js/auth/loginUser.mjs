@@ -7,6 +7,7 @@
  * ``` 
  */
 export default async function loginUser(url, userData) {
+    console.log(userData);
     try {
         const postData = {
             method: 'POST',
@@ -16,19 +17,22 @@ export default async function loginUser(url, userData) {
             body: JSON.stringify(userData),
         };
         const response = await fetch(url, postData);
-        if (response.ok) {
+        console.log(response);
+        if (response) {
             const json = await response.json();
             const accessToken = json.accessToken;
-            if (accessToken) {
-                localStorage.setItem('accessToken', accessToken)
-            } else {
-                console.log("No accesstoken found")
-            }
+            //if (accessToken) {
+            //    localStorage.setItem('accessToken', accessToken)
+            //} else {
+            //    console.log("No accesstoken found")
+            //}
+            console.log(json);
             const formEl = document.querySelector("#loginform");
             if (formEl) {
                 const attribute = formEl.getAttribute("action");
                 if (attribute) {
-                    window.location.href = attribute;
+                    //window.location.href = attribute;
+                    console.log(accessToken);
                 } else {
                     console.log("Form element doesn't have an 'action' attribute.");
                 }

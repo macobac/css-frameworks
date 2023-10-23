@@ -1,7 +1,12 @@
-import { regName, regEmail, regPassword } from "../userData/formData.mjs";
+export default function userToReg() {
+    const regName = document.querySelector('#regusername');
+    const regEmail = document.querySelector('#regemail');
+    const regPassword = document.querySelector('#regpassword');
 
-export const userToReg = {
-    "name": regName.value,
-    "email": regEmail.value,
-    "password": regPassword.value,
-};
+    const user = {
+        username: regName.value,
+        email: regEmail.value,
+        password: regPassword.value
+    };
+    return user;
+}
