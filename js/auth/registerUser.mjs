@@ -16,12 +16,22 @@ export default async function registerUser(url, userData) {
             body: JSON.stringify(userData),
         };
         const response = await fetch(url, postData);
-        const json = await response.json();
-        console.log(json);
-        const formEl = document.querySelector("#regform");
-        const attribute = formEl.getAttribute("action");
-        if (response && response.ok) {
-            window.location.href = attribute;
+        if (response.ok) {
+            const json = await response.json();
+            console.log(json);
+            const formEl = document.querySelector("#regform");
+            if (formEl) {
+                const attribute = formEl.getAttribute("action");
+                if (attribute) {
+                    window.location.href = attribute;
+                } else {
+                    console.log("Form element doesn't have an 'action' attribute.");
+                }
+            } else {
+                console.log("Form element not found.");
+            }
+        } else {
+            console.log("Failed to register the user. Status code: " + response.status);
         }
     } catch (error) {
         console.log(error);
