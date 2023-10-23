@@ -4,7 +4,7 @@ export default function userToReg() {
     const regPassword = document.querySelector('#regpassword');
 
     const user = {
-        username: regName.value,
+        name: regName.value,
         email: regEmail.value,
         password: regPassword.value
     };

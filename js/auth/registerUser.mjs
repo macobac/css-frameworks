@@ -7,7 +7,6 @@
  * ``` 
  */
 export default async function registerUser(url, userData) {
-    console.log(userData);
     try {
         const postData = {
             method: 'POST',
@@ -19,7 +18,6 @@ export default async function registerUser(url, userData) {
         const response = await fetch(url, postData);
         if (response) {
             const json = await response.json();
-            console.log(json);
             const formEl = document.querySelector("#regform");
             if (formEl) {
                 const attribute = formEl.getAttribute("action");
