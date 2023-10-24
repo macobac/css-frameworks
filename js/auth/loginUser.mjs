@@ -7,6 +7,7 @@
  * ``` 
  */
 export default async function loginUser(url, userData) {
+    console.log(userData)
     try {
         const postData = {
             method: 'POST',

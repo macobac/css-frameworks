@@ -1,3 +1,5 @@
+import errorMessage from "./errorMessage.mjs";
+
 /**
  * API call that registers user
  * @param {string} url 
