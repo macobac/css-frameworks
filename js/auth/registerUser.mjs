@@ -20,6 +20,12 @@ export default async function registerUser(url, userData) {
         const response = await fetch(url, postData);
         if (response) {
             const json = await response.json();
+            //put api response actions in here
+            const regBtn = document.querySelector(".regbtn");
+            const apiMessage = json.errors[0].message;
+            const outputMessage = `Error: ${apiMessage}`
+            errorMessage(regBtn, outputMessage);
+            //if there is no apimessage, then go to different window
             const formEl = document.querySelector("#regform");
             if (formEl) {
                 const attribute = formEl.getAttribute("action");
