@@ -1,4 +1,4 @@
-import { registerUrl } from "../auth/apiConst.mjs";
+import { registerUrl } from "../auth/constants.mjs";
 import userToReg from "../userData/userToReg.mjs";
 import registerUser from "../auth/registerUser.mjs";
 
