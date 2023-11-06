@@ -49,9 +49,3 @@ export default async function registerUser(url, userData) {
 // if registration not successful, red ("error") message display the error code and error message(error message needs to be hardcoded if im not wrong, just do the most common ones and then one for "if error message anything else than "xxx", print this: "contact /help blabla")
 // needs to "reset" error message but not form input for when error wrong
 
-//maybe put "ok" code first and then error
-//apiErrorMessage needs to be another place, else error in console
-
-
-
-

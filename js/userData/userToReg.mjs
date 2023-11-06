@@ -1,8 +1,8 @@
-export default function userToReg() {
-    const regName = document.querySelector('#regusername');
-    const regEmail = document.querySelector('#regemail');
-    const regPassword = document.querySelector('#regpassword');
+import { regName } from "../auth/constants.mjs";
+import { regEmail } from "../auth/constants.mjs";
+import { regPassword } from "../auth/constants.mjs";
 
+export default function userToReg() {
     const user = {
         name: regName.value,
         email: regEmail.value,
