@@ -21,23 +21,21 @@ export default async function registerUser(url, userData) {
             body: JSON.stringify(userData),
         };
         const response = await fetch(url, postData);
-        if (response) {
-            const json = await response.json();
-            if (json) {
-                const outputSuccessMessage = `Your registration was successful, you can now log in.`;
-                successMessage(regBtn, outputSuccessMessage);
-            } else {
-                const apiErrorMessage = json.errors[0].message;
-                const outputErrorMessage = `Error: ${apiErrorMessage}`
-                errorMessage(regBtn, outputErrorMessage);
-            };
+        if (response.ok) {
+            const outputSuccessMessage = `Your registration was successful, you can now log in.`;
+            successMessage(regBtn, outputSuccessMessage);
+            return true;
         } else {
-            //find out what to put in here
-            console.log("somth went wrong")
+            const json = await response.json();
+            const apiErrorMessage = json.errors[0].message;
+            const outputErrorMessage = `Error: ${apiErrorMessage}`
+            errorMessage(regBtn, outputErrorMessage);
+            return false;
         }
     } catch (error) {
         //find out what to put in here
         console.log(error);
+        return false;
     }
 };
 
