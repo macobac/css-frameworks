@@ -11,5 +11,5 @@ regForm.addEventListener('submit', async (event) => {
     if (registrationSuccessful) {
       regForm.reset(); 
     }
-
+//error and success msg should clear when new input is being added
 })
