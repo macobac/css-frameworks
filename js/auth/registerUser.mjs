@@ -1,4 +1,5 @@
-import errorMessage from "./errorMessage.mjs";
+import errorMessage from "../auth/errorMessage.mjs";
+import { regBtn } from "../auth/constants.mjs";
 
 /**
  * API call that registers user
@@ -21,8 +22,8 @@ export default async function registerUser(url, userData) {
         if (response) {
             const json = await response.json();
             //put api response actions in here
-            //put regBtn const in apiconst(call the file just constants, change file paths everywhere) and import it here
-            const regBtn = document.querySelector(".regbtn");
+
+
             //maybe put "ok" code first and then error
             //apiErrorMessage needs to be another place, else error in console
             const apiErrorMessage = json.errors[0].message;
