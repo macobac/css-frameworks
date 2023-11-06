@@ -1,8 +1,8 @@
 import { registerUrl } from "../auth/constants.mjs";
 import userToReg from "../userData/userToReg.mjs";
 import registerUser from "../auth/registerUser.mjs";
+import { regForm } from "../auth/constants.mjs";
 
-const regForm = document.querySelector('#regform');
 
 regForm.addEventListener('submit', async (event) => {
     event.preventDefault();

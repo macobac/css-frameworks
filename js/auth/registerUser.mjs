@@ -1,7 +1,7 @@
 import errorMessage from "../auth/errorMessage.mjs";
 import successMessage from "../auth/successMessage.mjs";
 import { regBtn } from "../auth/constants.mjs";
-import { formEl } from "../auth/constants.mjs";
+
 
 /**
  * API call that registers user
@@ -24,7 +24,7 @@ export default async function registerUser(url, userData) {
         if (response) {
             const json = await response.json();
             if (json) {
-                const outputSuccessMessage = `It worked`;
+                const outputSuccessMessage = `Your registration was successful, you can now log in.`;
                 successMessage(regBtn, outputSuccessMessage);
             } else {
                 const apiErrorMessage = json.errors[0].message;
