@@ -7,3 +7,5 @@ export const loginUrl = `${apiBaseUrl}/social/auth/login`;
 export const postsUrl = `${apiBaseUrl}/social/posts`;
 
 export const regBtn = document.querySelector(".regbtn");
+
+export const formEl = document.querySelector("#regform");

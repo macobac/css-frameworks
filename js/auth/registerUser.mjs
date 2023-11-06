@@ -1,5 +1,6 @@
 import errorMessage from "../auth/errorMessage.mjs";
 import { regBtn } from "../auth/constants.mjs";
+import { formEl } from "../auth/constants.mjs";
 
 /**
  * API call that registers user
@@ -21,15 +22,15 @@ export default async function registerUser(url, userData) {
         const response = await fetch(url, postData);
         if (response) {
             const json = await response.json();
+            
+
             //put api response actions in here
-// what do i wanna do here
-// other pg: make a new go to login btn on reg pg
-// user with @noroff.no or @stud.noroff.no email can register profile --> this should maybe be declared in different file? then just import
-// when successfully registered, green ("error") message display registration successful, you can now go to login pg
-// needs to NOT reset error message but form input for when reg successful
-//finish for if successfull - error part below
-// if registration not successful, red ("error") message display the error code and error message(error message needs to be hardcoded if im not wrong, just do the most common ones and then one for "if error message anything else than "xxx", print this: "contact /help blabla")
-// needs to "reset" error message but not form input for when error wrong
+            // what do i wanna do here
+            // when successfully registered, green ("error") message display registration successful, you can now go to login pg
+            // needs to NOT reset error message but form input for when reg successful
+            //finish for if successfull - error part below
+            // if registration not successful, red ("error") message display the error code and error message(error message needs to be hardcoded if im not wrong, just do the most common ones and then one for "if error message anything else than "xxx", print this: "contact /help blabla")
+            // needs to "reset" error message but not form input for when error wrong
 
             //maybe put "ok" code first and then error
             //apiErrorMessage needs to be another place, else error in console
@@ -40,9 +41,9 @@ export default async function registerUser(url, userData) {
                 const outputErrorMessage = `Error: ${apiErrorMessage}`
                 errorMessage(regBtn, outputErrorMessage);
             } else if (apiMessageId)
-            //if there is no apiErrorMessage, then go to different window
+
             {
-                const formEl = document.querySelector("#regform");
+      
                 if (formEl) {
                     const attribute = formEl.getAttribute("action");
                     if (attribute) {
