@@ -11,4 +11,5 @@ regForm.addEventListener('submit', async (event) => {
     if (registrationSuccessful) {
       regForm.reset(); 
     }
+
 })
