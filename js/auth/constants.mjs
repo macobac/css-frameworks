@@ -10,5 +10,5 @@ export const regName = document.querySelector('#regusername');
 export const regEmail = document.querySelector('#regemail');
 export const regPassword = document.querySelector('#regpassword');
 
-export const outputSuccessMessage = `Your registration was successful, you can now log in.`;
+export const regSuccessMessage = `Your registration was successful, you can now log in.`;
 export const genericErrorMessage = `An unexpected error occurred. Please try again later. If the error persists, contact us.`

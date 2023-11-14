@@ -1,7 +1,7 @@
 import errorMessage from "../auth/errorMessage.mjs";
 import successMessage from "../auth/successMessage.mjs";
 import { regBtn } from "../auth/constants.mjs";
-import { outputSuccessMessage } from "../auth/constants.mjs";
+import { regSuccessMessage } from "../auth/constants.mjs";
 import { genericErrorMessage } from "../auth/constants.mjs";
 
 /**
@@ -23,7 +23,7 @@ export default async function registerUser(url, userData) {
         };
         const response = await fetch(url, postData);
         if (response.ok) {
-            successMessage(regBtn, outputSuccessMessage);
+            successMessage(regBtn, regSuccessMessage);
             return true;
         } else {
             const json = await response.json();
