@@ -2,6 +2,7 @@ import errorMessage from "../auth/errorMessage.mjs";
 import successMessage from "../auth/successMessage.mjs";
 import { regBtn } from "../auth/constants.mjs";
 import { outputSuccessMessage } from "../auth/constants.mjs";
+import { genericErrorMessage } from "../auth/constants.mjs";
 
 /**
  * API call that registers user
@@ -34,6 +35,7 @@ export default async function registerUser(url, userData) {
     } catch (error) {
         //find out what to put in here
         console.log(error);
+        errorMessage(regBtn, genericErrorMessage);
         return false;
     }
 };
