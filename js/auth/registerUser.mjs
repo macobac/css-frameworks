@@ -33,7 +33,6 @@ export default async function registerUser(url, userData) {
             return false;
         }
     } catch (error) {
-        //find out what to put in here
         console.log(error);
         errorMessage(regBtn, genericErrorMessage);
         return false;
