@@ -25,6 +25,8 @@ export default async function loginUser(url, userData) {
             const json = await response.json();
             const accessToken = json.accessToken;
             localStorage.setItem('accessToken', accessToken);
+            //get form action attribute
+            
             return true;
         } else {
             const json = await response.json();
