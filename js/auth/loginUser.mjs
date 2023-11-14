@@ -1,3 +1,8 @@
+import errorMessage from "../auth/errorMessage.mjs";
+import { loginBtn } from "../auth/constants.mjs";
+import { genericErrorMessage } from "../auth/constants.mjs";
+
+
 /**
  * API call that logs in user
  * @param {string} url 
@@ -7,7 +12,6 @@
  * ``` 
  */
 export default async function loginUser(url, userData) {
-    console.log(userData)
     try {
         const postData = {
             method: 'POST',
@@ -17,33 +21,22 @@ export default async function loginUser(url, userData) {
             body: JSON.stringify(userData),
         };
         const response = await fetch(url, postData);
-        console.log(response);
-        if (response) {
+        if (response.ok) {
             const json = await response.json();
             const accessToken = json.accessToken;
-            if (accessToken) {
-                localStorage.setItem('accessToken', accessToken)
-            } else {
-                console.log("No accesstoken found")
-            }
-            console.log(json);
-            const formEl = document.querySelector("#loginform");
-            if (formEl) {
-                const attribute = formEl.getAttribute("action");
-                if (attribute) {
-                    //window.location.href = attribute;
-                    console.log(accessToken);
-                } else {
-                    console.log("Form element doesn't have an 'action' attribute.");
-                }
-            } else {
-                console.log("Form element not found.");
-            }
+            localStorage.setItem('accessToken', accessToken);
+            return true;
         } else {
-            console.log("Failed to login the user. Status code: " + response.status);
+            const json = await response.json();
+            const apiErrorMessage = json.errors[0].message;
+            const outputErrorMessage = `Error: ${apiErrorMessage}`
+            errorMessage(loginBtn, outputErrorMessage);
+            return false;
         }
 
     } catch (error) {
         console.log(error);
+        errorMessage(loginBtn, genericErrorMessage);
+        return false;
     }
 }
