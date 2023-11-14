@@ -1,7 +1,7 @@
 import errorMessage from "../auth/errorMessage.mjs";
 import successMessage from "../auth/successMessage.mjs";
 import { regBtn } from "../auth/constants.mjs";
-
+import { outputSuccessMessage } from "../auth/constants.mjs";
 
 /**
  * API call that registers user
@@ -22,7 +22,6 @@ export default async function registerUser(url, userData) {
         };
         const response = await fetch(url, postData);
         if (response.ok) {
-            const outputSuccessMessage = `Your registration was successful, you can now log in.`;
             successMessage(regBtn, outputSuccessMessage);
             return true;
         } else {

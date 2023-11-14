@@ -9,3 +9,5 @@ export const regForm = document.querySelector("#regform");
 export const regName = document.querySelector('#regusername');
 export const regEmail = document.querySelector('#regemail');
 export const regPassword = document.querySelector('#regpassword');
+
+export const outputSuccessMessage = `Your registration was successful, you can now log in.`;
