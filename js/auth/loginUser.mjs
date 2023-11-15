@@ -25,8 +25,8 @@ export default async function loginUser(url, userData) {
             const json = await response.json();
             const accessToken = json.accessToken;
             localStorage.setItem('accessToken', accessToken);
-            //redirect to feed pg
-            //get form action attribute
+            //redirect to feed pg - this prob needs to change later when uploading site?
+            window.location.replace(`/feed.html`)
 
             return true;
         } else {
