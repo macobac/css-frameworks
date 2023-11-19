@@ -9,6 +9,7 @@ Course assignment on bootstrap
 
 In progress comments:
 
+//add author etc to fetched posts. currently showing undefined
 //add bootstrap classes to posts
 
 
