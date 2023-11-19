@@ -1,7 +1,7 @@
 export default async function displayPost(posts) {
     const newDiv = document.createElement("div");
     const newTitle = document.createElement("p");
-    newTitle.innerHTML = posts.title;
+    newTitle.innerText = posts.title;
 
     newDiv.appendChild(newTitle);
 

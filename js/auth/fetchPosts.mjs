@@ -1,4 +1,4 @@
-import displayPost from "../posts/displayPost.mjs";
+//import displayPost from "../posts/displayPost.mjs";
 
 export default async function fetchPosts(url) {
     try {
@@ -15,7 +15,10 @@ export default async function fetchPosts(url) {
         const json = await response.json();
         console.log(json);
 
-        //displayPost(json)
+        //for (let i = 0; i < json[0].title.length; i++) {
+            //displayPost(json[i].title)
+        //}
+        
         //return json - probs here to display posts with function;
     } catch (error) {
         console.log(error);
