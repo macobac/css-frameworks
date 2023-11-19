@@ -9,7 +9,6 @@ Course assignment on bootstrap
 
 In progress comments:
 
-//need to limit posts, have btn to fetch more posts
 //add bootstrap classes to posts
 
 
