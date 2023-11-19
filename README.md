@@ -21,6 +21,18 @@ In progress comments:
 - User can delete a post content item
 
 
+## Feeling fancy?:
+
+- User can create a comment on a post
+- User can edit profile media
+- User can follow/unfollow a profile
+- User can react to a post content item
+
+Feeling fancy comments:
+
+//User cant see posts when they first log in but get a suggestion of who to follow/suggestion of posts?
+
+
 ## Done:
 
 - User with @noroff.no or @stud.noroff.no email can register profile
