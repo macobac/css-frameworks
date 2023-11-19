@@ -19,7 +19,7 @@ export default async function fetchPosts(url) {
             displayPost(json[i])
         }
         
-        //return json;
+
     } catch (error) {
         console.log(error);
     }
