@@ -1,6 +1,8 @@
 # css-frameworks
 Course assignment on bootstrap
 
+
+
 ## In progress:
 
 - User can view a post content feed
@@ -11,6 +13,7 @@ In progress comments:
 //add bootstrap classes to posts
 
 
+
 ## To-do list:
 
 - User can filter the post content feed
@@ -19,6 +22,11 @@ In progress comments:
 - User can create a post content item
 - User can update a post content item
 - User can delete a post content item
+
+To-do list comments:
+
+//A .gitignore file must be provided including node_modules. This folder must be untracked.
+
 
 
 ## Feeling fancy?:
@@ -31,6 +39,7 @@ In progress comments:
 Feeling fancy comments:
 
 //User cant see posts when they first log in but get a suggestion of who to follow/suggestion of posts?
+
 
 
 ## Done:
