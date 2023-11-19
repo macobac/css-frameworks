@@ -9,7 +9,7 @@ Course assignment on bootstrap
 
 In progress comments:
 
-//add function to fetch author and other details to add to fetchPostsDiv , maybe put this function inside display posts -> need to make new api fetch, _posts in the url, then posts.owner (and other stuff)
+//fetch author
 //add bootstrap classes to posts
 
 
