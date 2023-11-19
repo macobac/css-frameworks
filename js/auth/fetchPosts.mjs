@@ -1,4 +1,4 @@
-export default async function getWithToken(url) {
+export default async function fetchPosts(url) {
     try {
         const token = localStorage.getItem('accessToken');
         const fetchOptions = {
@@ -9,8 +9,10 @@ export default async function getWithToken(url) {
             },
         };
         const response = await fetch(url, fetchOptions);
+        console.log(response);
         const json = await response.json();
-        return json;
+        console.log(json);
+        //return json;
     } catch (error) {
         console.log(error);
     }

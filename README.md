@@ -2,4 +2,5 @@
 Course assignment on bootstrap
 
 Todo:
-// getWithToken.mjs - figure out what to do here - make to getPosts, getProfile ? then check url what pg and check for jwt?? // -> have it in header Bearer
+
+//getposts -> works to fetch posts, and console log them. i need to display the posts each for them from api(output)
