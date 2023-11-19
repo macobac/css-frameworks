@@ -1,6 +1,6 @@
 import displayPost from "../posts/displayPost.mjs";
 
-export default async function fetchPosts(url) {
+export default async function fetchPosts(url, limit, offset) {
     try {
         const token = localStorage.getItem('accessToken');
         const fetchOptions = {
@@ -10,7 +10,7 @@ export default async function fetchPosts(url) {
                 Authorization: `Bearer ${token}`,
             },
         };
-        const response = await fetch(url, fetchOptions);
+        const response = await fetch(`${url}?limit=${limit}&offset=${offset}`, fetchOptions);
         console.log(response);
         const json = await response.json();
         console.log(json);
@@ -18,7 +18,7 @@ export default async function fetchPosts(url) {
         for (let i = 0; i < json.length; i++) {
             displayPost(json[i])
         }
-        
+
 
     } catch (error) {
         console.log(error);

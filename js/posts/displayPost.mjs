@@ -1,3 +1,5 @@
+import { fetchedDiv } from "../auth/constants.mjs";
+
 export default async function displayPost(posts) {
     const newDiv = document.createElement("div");
     const newTitle = document.createElement("h2");
@@ -11,6 +13,5 @@ export default async function displayPost(posts) {
     newDiv.appendChild(newBody);
     //newDiv.appendChild(newImg);
 
-    const currentDiv = document.querySelector(".fetchPostsDiv");
-    document.body.insertBefore(newDiv, currentDiv);
+    document.body.insertBefore(newDiv, fetchedDiv);
 }

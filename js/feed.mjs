@@ -1,4 +1,13 @@
 import fetchPosts from "./auth/fetchPosts.mjs";
-import { postsUrl } from "./auth/constants.mjs";
+import { postsUrl, fetchBtn } from "./auth/constants.mjs";
 
-fetchPosts(postsUrl);
+let postLimit = 5;
+let postOffset = 0;
+
+fetchPosts(postsUrl, postLimit, postOffset);
+
+
+fetchBtn.addEventListener('click', () => {
+    postOffset += postLimit;
+    fetchPosts(postsUrl, postLimit, postOffset);
+});

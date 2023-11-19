@@ -18,3 +18,6 @@ export const loginPassword = document.querySelector('#loginpassword');
 
 export const regSuccessMessage = `Your registration was successful, you can now log in.`;
 export const genericErrorMessage = `An unexpected error occurred. Please try again later. If the error persists, contact us.`
+
+export const fetchBtn = document.querySelector(".fetchBtn")
+export const fetchedDiv = document.querySelector(".fetchPostsDiv");
