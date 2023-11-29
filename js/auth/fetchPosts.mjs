@@ -10,7 +10,7 @@ export default async function fetchPosts(url, limit, offset) {
                 Authorization: `Bearer ${token}`,
             },
         };
-        const response = await fetch(`${url}?limit=${limit}&offset=${offset}`, fetchOptions);
+        const response = await fetch(`${url}?limit=${limit}&offset=${offset}&_author=true`, fetchOptions);
         console.log(response);
         const json = await response.json();
         console.log(json);

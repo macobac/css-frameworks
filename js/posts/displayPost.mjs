@@ -8,10 +8,14 @@ export default async function displayPost(posts) {
     newBody.innerText = posts.body;
     //const newImg = document.createElement("img");
     //newImg.src = posts.media;
-
+    const newAuthor = document.createElement("p");
+    newAuthor.innerText = posts.author.name;
+    
+    newDiv.appendChild(newAuthor);
     newDiv.appendChild(newTitle);
     newDiv.appendChild(newBody);
     //newDiv.appendChild(newImg);
+    
 
     document.body.insertBefore(newDiv, fetchedDiv);
 }

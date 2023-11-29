@@ -9,7 +9,6 @@ Course assignment on bootstrap
 
 In progress comments:
 
-//fetch author
 //add bootstrap classes to posts
 
 
