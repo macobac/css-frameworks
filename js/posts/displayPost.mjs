@@ -14,8 +14,9 @@ export default async function displayPost(posts) {
     const newBody = document.createElement("p");
     newBody.innerText = posts.body;
     newBody.classList.add("card-text");
-    const newAuthor = document.createElement("p");
+    const newAuthor = document.createElement("a");
     newAuthor.innerText = posts.author.name;
+    //newAuthor.src = ?
     newAuthor.classList.add("card-text", "post-author");
     const newDate = document.createElement("p");
     newDate.innerText = formatDate(posts.created);
