@@ -15,13 +15,17 @@ export default async function displayPost(posts) {
     const newAuthor = document.createElement("p");
     newAuthor.innerText = posts.author.name;
     newAuthor.classList.add("card-text", "post-author");
-    //img can only be added if there is img. needs to fix
-    //const newImg = document.createElement("img");
-    //newImg.src = posts.media;
-    //newImg.classList.add("card-img-top");
-    
 
-    //innerDiv.appendChild(newImg);
+    let newImg;
+    if (posts.media) {
+        newImg = document.createElement("img");
+        newImg.src = posts.media;
+        newImg.classList.add("card-img-top");
+    };
+    if (newImg) {
+        innerDiv.appendChild(newImg);
+    };
+
     innerDiv.appendChild(newAuthor);
     innerDiv.appendChild(newTitle);
     innerDiv.appendChild(newBody);
