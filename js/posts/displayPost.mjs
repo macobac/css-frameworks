@@ -1,9 +1,11 @@
 import { fetchedDiv } from "../auth/constants.mjs";
 
+import formatDate from "../posts/formatDate.mjs";
+
 export default async function displayPost(posts) {
     const newDiv = document.createElement("div");
-    newDiv.classList.add("card");
-    newDiv.style.width = "12rem";
+    newDiv.classList.add("card", "my-3", "mx-auto");
+    
     const innerDiv = document.createElement("div");
     innerDiv.classList.add("card-body");
     const newTitle = document.createElement("h2");
@@ -15,6 +17,9 @@ export default async function displayPost(posts) {
     const newAuthor = document.createElement("p");
     newAuthor.innerText = posts.author.name;
     newAuthor.classList.add("card-text", "post-author");
+    const newDate = document.createElement("p");
+    newDate.innerText = formatDate(posts.created);
+    newDate.classList.add("postCreatedOn");
 
     let newImg;
     if (posts.media) {
@@ -27,6 +32,7 @@ export default async function displayPost(posts) {
     };
 
     innerDiv.appendChild(newAuthor);
+    innerDiv.appendChild(newDate);
     innerDiv.appendChild(newTitle);
     innerDiv.appendChild(newBody);
     
