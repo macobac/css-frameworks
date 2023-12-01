@@ -5,11 +5,10 @@ Course assignment on bootstrap
 
 ## In progress:
 
-- User can view a post content feed
+
 
 In progress comments:
 
-//add bootstrap classes to posts
 
 
 
@@ -46,3 +45,5 @@ Feeling fancy comments:
 - User with @noroff.no or @stud.noroff.no email can register profile
 
 - Registered user can login
+
+- User can view a post content feed
