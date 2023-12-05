@@ -22,15 +22,16 @@
             <button class="btn btn-outline-primary" type="submit"><img src="/images/search-icon.png" alt="search icon"
                     height="25px"></button>
         </form>
+
         <div class="dropdown">
             <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdown-sort"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Sort after:
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdown-sort">
-                <li><a class="dropdown-item" href="#">Latest posts</a></li>
+                <li><a class="dropdown-item" href="#" id="latest-posts">Latest posts</a></li>
+                <li><a class="dropdown-item" href="#" id="oldest-posts">Oldest posts</a></li>
                 <li><a class="dropdown-item" href="#">Popular posts</a></li>
-                <li><a class="dropdown-item" href="#">Friends posts</a></li>
             </ul>
         </div>
 
@@ -42,6 +43,8 @@
     </div>
 
     <button class="fetchBtn">See more posts</button>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/feed.mjs" type="module"></script>
 </body>
 
