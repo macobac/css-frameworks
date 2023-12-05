@@ -7,6 +7,8 @@ Course assignment on bootstrap
 
 - User can filter the post content feed
 
+ - user can view a profile
+
 In progress comments:
 
 //something weird going on with sorting and button and sorting again - feed.mjs
