@@ -21,3 +21,6 @@ export const genericErrorMessage = `An unexpected error occurred. Please try aga
 
 export const fetchBtn = document.querySelector(".fetchBtn")
 export const fetchedDiv = document.querySelector(".fetchPostsDiv");
+
+export const latestPosts = document.querySelector(".latest-posts")
+export const oldestPosts = document.querySelector(".oldest-posts");
