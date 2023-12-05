@@ -5,7 +5,7 @@ Course assignment on bootstrap
 
 ## In progress:
 
-
+- User can filter the post content feed
 
 In progress comments:
 
@@ -14,7 +14,6 @@ In progress comments:
 
 ## To-do list:
 
-- User can filter the post content feed
 - User can search the post content feed
 - User can view a post content item by ID
 - User can create a post content item
