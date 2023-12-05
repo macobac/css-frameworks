@@ -9,7 +9,7 @@ Course assignment on bootstrap
 
 In progress comments:
 
-
+//something weird going on with sorting and button and sorting again - feed.mjs
 
 
 ## To-do list:
