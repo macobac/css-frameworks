@@ -17,42 +17,31 @@
         <a href="profile.html" class="link-primary">Profile</a>
     </nav>
 
-    <div class="container">
-        <div class="row d-flex align-items-center justify-content-center">
-            <div class="col-12">
-                <img src="/images/post-img1.png" alt="profile image" height="50px">
-            </div>
-            <div class="col-12">
-                <p class="username text-primary">purplelover</p>
-            </div>
-            <div class="col-12"><button class="btn btn-secondary">Follow</button></div>
-            <div class="col-12">
-                <p class="follow-amount text-primary">30k+ people are following</p>
-            </div>
-
+   <div class="container">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-12">
+            <img src="/images/post-img1.png" alt="profile image" height="50px" id="profileImage">
         </div>
+        <div class="col-12">
+            <p class="username profile-name text-primary" id="profileName"></p>
+        </div>
+        <div class="col-12 text-primary profile-following" id="profileFollowing"></div>
+        <div class="col-12"><button class="btn btn-secondary" id="followBtn">Follow</button></div>
+        <div class="col-12 profile-followers text-primary" id="profileFollowers"></div>
+    </div>
+</div>
     </div>
 
 
 
     <div class="container">
-        <div class="row justify-content-around">
-            <div class="col-sm-4 col-md-2 col-xl-1">
-                <img src="/images/post-img1.png" alt="purple post" class="rounded">
-            </div>
-            <div class="col-sm-4 col-md-2 col-xl-1">
-                <img src="/images/post-img1.png" alt="purple post" class="rounded">
-            </div>
-            <div class="col-sm-4 col-md-2 col-xl-1">
-                <img src="/images/post-img1.png" alt="purple post" class="rounded">
-            </div>
-            <div class="col-sm-4 col-md-2 col-xl-1">
-                <img src="/images/post-img1.png" alt="purple post" class="rounded">
-            </div>
-
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-6 col-lg-4"></div>
         </div>
     </div>
-
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/profile.mjs" type="module"></script>
 </body>
 
 </html>
