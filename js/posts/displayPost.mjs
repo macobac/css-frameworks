@@ -14,13 +14,17 @@ export default async function displayPost(posts) {
     const newBody = document.createElement("p");
     newBody.innerText = posts.body;
     newBody.classList.add("card-text");
-    const newAuthor = document.createElement("a");
-    newAuthor.innerText = posts.author.name;
-    //newAuthor.src = ?
-    newAuthor.classList.add("card-text", "post-author");
     const newDate = document.createElement("p");
     newDate.innerText = formatDate(posts.created);
     newDate.classList.add("postCreatedOn");
+    const newAuthor = document.createElement("a");
+    newAuthor.innerText = posts.author.name;
+    newAuthor.href = `profile.html?name=${posts.author.name}`; 
+    newAuthor.classList.add("card-text", "post-author");
+    newAuthor.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = newAuthor.href;
+    });
 
     let newImg;
     if (posts.media) {
