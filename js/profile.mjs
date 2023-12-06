@@ -1,4 +1,4 @@
-import { profileName, profileFollowing, profileFollowers, profilesUrl, profileImage, profilePostsNr } from "./auth/constants.mjs";
+import { profileName, profileFollowing, profileFollowers, profilesUrl, profileImage, profilePostsNr, profileBanner } from "./auth/constants.mjs";
 
 import displayProfilePosts from "./posts/displayProfilePosts.mjs";
 
@@ -28,6 +28,9 @@ async function fetchProfileData(userId) {
             profileImage.src = profileData.avatar;
         }
         
+        if (profileData.banner) {
+            profileBanner.style.backgroundImage = `url(${profileData.banner})`;
+        }
 
         const postsres = await fetch(`${profilesUrl}/${userId}/posts`, fetchOptions);
         console.log(postsres);

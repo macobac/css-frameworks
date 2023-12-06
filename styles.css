@@ -1,0 +1,8 @@
+
+#profile-banner {
+    height: 150px;
+    background-image: url(images/post-img1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+};

@@ -7,10 +7,9 @@ Course assignment on bootstrap
 
 - User can filter the post content feed **
 
- - banner on profile
+
  - functioning follow btn on profile 
- - see 1-3 names "and xyz more" people are following this person - _following parameter
- - see profile follows 1-3 names "and xyz more" - _followers parameter
+
 
 In progress comments:
 
