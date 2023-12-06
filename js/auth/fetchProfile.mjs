@@ -15,15 +15,26 @@ export default async function fetchProfileData(userId) {
                 Authorization: `Bearer ${token}`,
             },
         };
-        const response = await fetch(`${profilesUrl}/${userId}`, fetchOptions);
-        const fetchedData = await response.json();
-        profileData(fetchedData)
+        const profileResponse = await fetch(`${profilesUrl}/${userId}`, fetchOptions);
+        const fetchedData = await profileResponse.json();
+        profileData(fetchedData);
 
-        const postsres = await fetch(`${profilesUrl}/${userId}/posts`, fetchOptions);
-        const profilePosts = await postsres.json();
+        const postsResponse = await fetch(`${profilesUrl}/${userId}/posts`, fetchOptions);
+        const profilePosts = await postsResponse.json();
         for (let i = 0; i < profilePosts.length; i++) {
-            displayProfilePosts(profilePosts[i])
-        }
+            displayProfilePosts(profilePosts[i]);
+        };
+        
+        /*const followOptions = {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+            },
+        };
+
+        const follow = //check if following
+        const followResponse = await fetch(`${profilesUrl}/${userId}/${follow}`); */
         
        
     } catch (error) {
