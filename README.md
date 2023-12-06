@@ -5,14 +5,13 @@ Course assignment on bootstrap
 
 ## In progress:
 
-- User can filter the post content feed
+- User can filter the post content feed **
 
- - user can view a profile
- - style the profile and fetch all things properly there
+ - functioning follow btn on profile 
 
 In progress comments:
 
-//something weird going on with sorting and button and sorting again - feed.mjs
+//**something weird going on with sorting and button and sorting again - feed.mjs
 
 
 ## To-do list:

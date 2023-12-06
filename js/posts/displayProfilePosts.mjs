@@ -17,7 +17,7 @@ export default async function displayPost(posts) {
     const newDate = document.createElement("p");
     newDate.innerText = formatDate(posts.created);
     newDate.classList.add("postCreatedOn");
-
+    
     let newImg;
     if (posts.media) {
         newImg = document.createElement("img");
