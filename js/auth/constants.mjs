@@ -30,3 +30,4 @@ export const profileName = document.querySelector("#profile-name")
 export const profileFollowing = document.querySelector("#profile-following");
 export const profileFollowers = document.querySelector("#profile-followers");
 export const profileImage = document.querySelector("#profile-image");
+export const profilePostsNr = document.querySelector("#profile-posts-nr");
