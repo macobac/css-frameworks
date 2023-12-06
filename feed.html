@@ -10,40 +10,46 @@
 
 <body>
     <div class="container">
-        <nav class="navbar">
-            <a href="#" class="navbar-brand"><img src="/images/purplelogo.png" alt="purple app logo" height="50px"></a>
-            <button class="btn btn-outline-primary rounded-5">+</button>
-            <a href="profile.html" class="link-primary">Profile</a>
+        <nav class="navbar navbar-expand-sm bg-dark">
+            <div class="container">
+                <a href="feed.html" class="navbar-brand"><img src="/images/purplelogo.png" alt="purple app logo"
+                        height="50px"></a>
+                <button class="btn btn-outline-primary rounded-5">+</button>
+                <li class="nav-item"><a href="profile.html" class="link-primary">Profile</a></li>
+            </div>
         </nav>
-    </div>
-    <div class="container">
-        <form action="#" class="d-flex">
-            <input type="search" class="form-control" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit"><img src="/images/search-icon.png" alt="search icon"
-                    height="25px"></button>
-        </form>
 
-        <div class="dropdown">
-            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdown-sort"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Sort after:
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdown-sort">
-                <li><a class="dropdown-item latest-posts" href="#" data-sort="latest">Latest posts</a></li>
-                <li><a class="dropdown-item oldest-posts" href="#" data-sort="oldest">Oldest posts</a></li>
-                <li><a class="dropdown-item" href="#" data-sort="popular">Popular posts</a></li>
-            </ul>
+        <div class="container bg-info">
+            <div class="row align-items-center justify-content-evenly">
+                <div class="col-auto">
+                    <form class="d-flex">
+                        <input type="search" class="form-control" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary hide-submit-txt" type="submit"><img
+                                src="/images/search-icon.png" alt="search icon" height="25px">Submit</button>
+                    </form>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdown-sort"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort after:</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item latest-posts" href="#" data-sort="latest">Latest posts</a></li>
+                        <li><a class="dropdown-item oldest-posts" href="#" data-sort="oldest">Oldest posts</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort="popular">Popular posts</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
 
-    </div>
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12 col-md-6 col-lg-4 fetchPostsDiv"></div>
+
+        <div class="container bg-body-secondary">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-6 col-lg-4 fetchPostsDiv"></div>
+            </div>
         </div>
-    </div>
 
-    <button class="fetchBtn">See more posts</button>
+        <button class="fetchBtn">See more posts</button>
+    </div>
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/feed.mjs" type="module"></script>
