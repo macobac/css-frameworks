@@ -8,6 +8,7 @@ Course assignment on bootstrap
 - User can filter the post content feed
 
  - user can view a profile
+ - style the profile and fetch all things properly there
 
 In progress comments:
 

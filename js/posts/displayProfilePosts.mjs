@@ -17,14 +17,6 @@ export default async function displayPost(posts) {
     const newDate = document.createElement("p");
     newDate.innerText = formatDate(posts.created);
     newDate.classList.add("postCreatedOn");
-    const newAuthor = document.createElement("a");
-    newAuthor.innerText = posts.name;
-    newAuthor.href = `profile.html?name=${posts.name}`; 
-    newAuthor.classList.add("card-text", "post-author");
-    newAuthor.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.location.href = newAuthor.href;
-    });
 
     let newImg;
     if (posts.media) {
@@ -36,7 +28,7 @@ export default async function displayPost(posts) {
         innerDiv.appendChild(newImg);
     };
 
-    innerDiv.appendChild(newAuthor);
+
     innerDiv.appendChild(newDate);
     innerDiv.appendChild(newTitle);
     innerDiv.appendChild(newBody);

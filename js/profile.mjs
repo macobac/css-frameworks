@@ -16,16 +16,17 @@ async function fetchProfileData(userId) {
             },
         };
         const response = await fetch(`${profilesUrl}/${userId}`, fetchOptions);
+        console.log(response);
         const profileData = await response.json();
-
+        console.log(profileData);
         profileName.innerText = profileData.name;
         profileFollowing.innerText = `Following: ${profileData._count.following}`;
         profileFollowers.innerText = `Followers: ${profileData._count.followers}`;
 
         const postsres = await fetch(`${profilesUrl}/${userId}/posts`, fetchOptions);
-
+        console.log(postsres);
         const profilePosts = await postsres.json();
-
+        console.log(profilePosts);
         for (let i = 0; i < profilePosts.length; i++) {
             displayProfilePosts(profilePosts[i])
         }
