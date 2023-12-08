@@ -7,9 +7,9 @@ Course assignment on bootstrap
 
 - User can filter the post content feed **
 
+- design so that on profile pg there is only imgs fetched in a 5x grid but when clicked on the posts u see 1 whole post
 
- - functioning follow btn on profile 
-
+- User can search the post content feed
 
 In progress comments:
 
@@ -18,7 +18,6 @@ In progress comments:
 
 ## To-do list:
 
-- User can search the post content feed
 - User can view a post content item by ID
 - User can create a post content item
 - User can update a post content item

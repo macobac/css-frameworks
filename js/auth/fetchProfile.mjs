@@ -1,13 +1,13 @@
 import profileData from "../userData/profileData.mjs";
-import { profilesUrl } from "./constants.mjs";
+import { profilesUrl} from "./constants.mjs";
 
 import displayProfilePosts from "../posts/displayProfilePosts.mjs";
 
 
 
 export default async function fetchProfileData(userId) {
+    const token = localStorage.getItem('accessToken');
     try {
-        const token = localStorage.getItem('accessToken');
         const fetchOptions = {
             method: 'GET',
             headers: {
@@ -24,19 +24,7 @@ export default async function fetchProfileData(userId) {
         for (let i = 0; i < profilePosts.length; i++) {
             displayProfilePosts(profilePosts[i]);
         };
-        
-        /*const followOptions = {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${token}`,
-            },
-        };
 
-        const follow = //check if following
-        const followResponse = await fetch(`${profilesUrl}/${userId}/${follow}`); */
-        
-       
     } catch (error) {
         console.error(error);
     }
