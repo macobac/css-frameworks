@@ -18,12 +18,12 @@ export const loginEmail = document.querySelector('#useremail');
 export const loginPassword = document.querySelector('#loginpassword');
 
 export const regSuccessMessage = `Your registration was successful, you can now log in.`;
-export const genericErrorMessage = `An unexpected error occurred. Please try again later. If the error persists, contact us.`
+export const genericErrorMessage = `An unexpected error occurred. Please try again later. If the error persists, contact us.`;
 
-export const fetchBtn = document.querySelector(".fetchBtn")
+export const fetchBtn = document.querySelector(".fetchBtn");
 export const fetchedDiv = document.querySelector(".fetchPostsDiv");
 
-export const latestPosts = document.querySelector(".latest-posts")
+export const latestPosts = document.querySelector(".latest-posts");
 export const oldestPosts = document.querySelector(".oldest-posts");
 
 export const profileName = document.querySelector("#profile-name")
@@ -32,3 +32,9 @@ export const profileFollowers = document.querySelector("#profile-followers");
 export const profileImage = document.querySelector("#profile-image");
 export const profilePostsNr = document.querySelector("#profile-posts-nr");
 export const profileBanner = document.querySelector("#profile-banner");
+
+export const newPostBtn = document.querySelector("#new-post-btn");
+export const inputTitle = document.querySelector("#inputTitle");
+export const inputMedia = document.querySelector("#inputMedia");
+export const inputBody = document.querySelector("#inputBody");
+export const createPostBtn = document.querySelector("#createPostBtn");

@@ -9,7 +9,7 @@ Course assignment on bootstrap
 
 - design so that on profile pg there is only imgs fetched in a 5x grid but when clicked on the posts u see 1 whole post
 
-- User can search the post content feed
+- User can create a post content item
 
 In progress comments:
 
@@ -18,8 +18,9 @@ In progress comments:
 
 ## To-do list:
 
+- User can search the post content feed
 - User can view a post content item by ID
-- User can create a post content item
+
 - User can update a post content item
 - User can delete a post content item
 

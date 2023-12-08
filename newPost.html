@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+    <link rel="stylesheet" href="/dist/css/styles.css">
+</head>
+
+<body class="bg-primary-subtle bg-gradient">
+    <div class="container bg-light bg-gradient">
+        <nav class="navbar">
+            <div class="container">
+                <a href="feed.html" class="navbar-brand"><img src="/images/purplelogo.png" alt="purple app logo" height="50px"></a>
+                <button class="btn btn-outline-primary rounded-5" id="new-post-btn">+</button>
+                <div class="nav-item"><a href="profile.html" class="link-primary">Profile</a></div>
+            </div>
+        </nav>
+        <div class="container">
+            <form class="row align-items-end">
+                <div class="col">
+                    <label for="inputTitle" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="inputTitle">
+                </div>
+                <div class="col">
+                    <label for="inputMedia" class="form-label">Media</label>
+                    <input type="text" class="form-control" id="inputMedia">
+                </div>
+                <div class="col">
+                    <label for="inputBody" class="form-label">Body</label>
+                    <input type="text" class="form-control" id="inputBody">
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary" id="createPostBtn">Create post</button>
+                </div>
+            </form>
+        </div>
+       
+    </div>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/feed.mjs" type="module"></script>
+</body>
+
+</html>
