@@ -1,13 +1,11 @@
 import errorMessage from "../auth/errorMessage.mjs";
 import successMessage from "../auth/successMessage.mjs";
-import { regBtn } from "../auth/constants.mjs";
-import { regSuccessMessage } from "../auth/constants.mjs";
-import { genericErrorMessage } from "../auth/constants.mjs";
+import { regBtn, regSuccessMessage, genericErrorMessage } from "../auth/constants.mjs";
 
 /**
  * API call that registers user
  * @param {string} url 
- * @param {any} userData
+ * @param {object} userData
  * ```js
  * registerUser(registerUrl, userToReg);
  * ``` 

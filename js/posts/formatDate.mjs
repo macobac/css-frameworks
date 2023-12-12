@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {string} apiDate 
+ * @returns {string} date in DD/MM/YYY/ format
+ */
 export default function formatDate(apiDate) {
     const date = new Date(apiDate);
     const options = { day: '2-digit', month: '2-digit', year: 'numeric' };

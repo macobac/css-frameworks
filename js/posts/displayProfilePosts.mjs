@@ -1,11 +1,13 @@
 import { fetchedDiv } from "../auth/constants.mjs";
-
 import formatDate from "../posts/formatDate.mjs";
 
+/**
+ * 
+ * @param {any} posts 
+ */
 export default async function displayPost(posts) {
     const newDiv = document.createElement("div");
     newDiv.classList.add("card", "my-3", "mx-auto");
-    
     const innerDiv = document.createElement("div");
     innerDiv.classList.add("card-body");
     const newTitle = document.createElement("h2");
@@ -17,7 +19,6 @@ export default async function displayPost(posts) {
     const newDate = document.createElement("p");
     newDate.innerText = formatDate(posts.created);
     newDate.classList.add("postCreatedOn");
-    
     let newImg;
     if (posts.media) {
         newImg = document.createElement("img");
@@ -27,13 +28,9 @@ export default async function displayPost(posts) {
     if (newImg) {
         innerDiv.appendChild(newImg);
     };
-
-
     innerDiv.appendChild(newDate);
     innerDiv.appendChild(newTitle);
     innerDiv.appendChild(newBody);
-    
     newDiv.appendChild(innerDiv);
-
     fetchedDiv.appendChild(newDiv);
 }

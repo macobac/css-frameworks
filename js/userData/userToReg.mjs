@@ -1,7 +1,10 @@
-import { regName } from "../auth/constants.mjs";
-import { regEmail } from "../auth/constants.mjs";
-import { regPassword } from "../auth/constants.mjs";
+import { regName, regEmail, regPassword } from "../auth/constants.mjs";
+import {  } from "../auth/constants.mjs";
 
+/**
+ * 
+ * @returns {object} user
+ */
 export default function userToReg() {
     const user = {
         name: regName.value,

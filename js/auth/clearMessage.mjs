@@ -1,7 +1,7 @@
 /**
  * 
- * @param {*} btn the submit button
- * @param {*} className classname of the message that you want to clear
+ * @param {any} btn the submit button
+ * @param {string} className classname of the message that you want to clear
  * ```js
  * clearMessage(btn, className);
  * ``` 

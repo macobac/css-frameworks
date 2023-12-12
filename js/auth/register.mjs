@@ -1,10 +1,7 @@
-import { registerUrl } from "../auth/constants.mjs";
+import { registerUrl, regForm, regBtn } from "../auth/constants.mjs";
 import userToReg from "../userData/userToReg.mjs";
 import registerUser from "../auth/registerUser.mjs";
-import { regForm } from "../auth/constants.mjs";
-import { regBtn } from "../auth/constants.mjs";
 import clearMessage from "../auth/clearMessage.mjs";
-
 
 regForm.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -15,5 +12,4 @@ regForm.addEventListener('submit', async (event) => {
     if (registrationSuccessful) {
       regForm.reset(); 
     }
-
 })

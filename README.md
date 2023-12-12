@@ -9,7 +9,11 @@ Course assignment on bootstrap
 
 - design so that on profile pg there is only imgs fetched in a 5x grid but when clicked on the posts u see 1 whole post
 
-- User can create a post content item
+- fix design on newPost.html
+
+- fetchNewPost.mjs: fix error msg inside dom not in console
+
+- make a logout btn
 
 In progress comments:
 
@@ -50,3 +54,5 @@ Feeling fancy comments:
 - Registered user can login
 
 - User can view a post content feed
+
+- User can create a post content item

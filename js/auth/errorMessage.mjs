@@ -1,6 +1,6 @@
 /**
  * 
- * @param {*} btn 
+ * @param {any} btn 
  * @param {string} errorMsg 
  * ```js
  * errorMessage(btn, errorMsg);
@@ -11,6 +11,5 @@ export default function errorMessage(btn, errorMsg) {
     errorDiv.className = 'error-message';
     errorDiv.textContent = errorMsg;
     errorDiv.style.color = 'red';
-
     btn.parentNode.insertBefore(errorDiv, btn.nextSibling);
 }

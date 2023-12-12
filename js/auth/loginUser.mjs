@@ -1,12 +1,10 @@
 import errorMessage from "../auth/errorMessage.mjs";
-import { loginBtn } from "../auth/constants.mjs";
-import { genericErrorMessage } from "../auth/constants.mjs";
-
+import { loginBtn, genericErrorMessage } from "../auth/constants.mjs";
 
 /**
  * API call that logs in user
  * @param {string} url 
- * @param {any} userData 
+ * @param {object} userData 
  * ```js
  * loginUser(loginUrl, userToLogin);
  * ``` 
@@ -25,9 +23,7 @@ export default async function loginUser(url, userData) {
             const json = await response.json();
             const accessToken = json.accessToken;
             localStorage.setItem('accessToken', accessToken);
-            //redirect to feed pg - this prob needs to change later when uploading site?
             window.location.replace(`/feed.html`)
-
             return true;
         } else {
             const json = await response.json();
@@ -36,7 +32,6 @@ export default async function loginUser(url, userData) {
             errorMessage(loginBtn, outputErrorMessage);
             return false;
         }
-
     } catch (error) {
         console.log(error);
         errorMessage(loginBtn, genericErrorMessage);
