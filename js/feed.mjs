@@ -1,5 +1,6 @@
 import fetchPosts from "./auth/fetchPosts.mjs";
 import { postsUrl, fetchBtn, latestPosts, oldestPosts, fetchedDiv } from "./auth/constants.mjs";
+import redirectToNewPost from "./posts/redirectToNewPost.mjs";
 
 let postLimit = 5;
 let postOffset = 0;
@@ -7,8 +8,10 @@ let sort = 'created';
 let sortOrder = 'desc';
 
 //something weird going on with sorting and button and sorting again
+redirectToNewPost();
 
-fetchPosts(postsUrl, postLimit, postOffset, sort, sortOrder);
+if (window.location.pathname !== '/newPost.html') {
+    fetchPosts(postsUrl, postLimit, postOffset, sort, sortOrder);
 
 fetchBtn.addEventListener('click', () => {
     postOffset += postLimit;
@@ -26,3 +29,6 @@ oldestPosts.addEventListener('click', () => {
     fetchedDiv.innerHTML = '';
     fetchPosts(postsUrl, postLimit, postOffset, sort, sortOrder);
 });
+
+}
+

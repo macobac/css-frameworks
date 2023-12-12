@@ -1,6 +1,5 @@
-import { postsUrl } from "./constants.mjs";
 
-export default async function fetchNewPost() {
+export default async function fetchNewPost(url, userData) {
     try {
         const token = localStorage.getItem('accessToken');
         const fetchOptions = {
@@ -9,13 +8,21 @@ export default async function fetchNewPost() {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`,
             },
+            body: JSON.stringify(userData),
         };
-        const response = await fetch(`${postsUrl}`, fetchOptions);
+        const response = await fetch(url, fetchOptions);
         console.log(response);
-        const json = await response.json();
-        console.log(json);
+        if (response.ok) {
+            // Clear input fields after successful post
+            inputTitle.value = '';
+            inputBody.value = '';
+            inputMedia.value = '';
 
-      
+            // Redirect to the feed page
+            window.location.href = '/feed.html';
+        } else {
+            console.error('Failed to create post:', response.statusText);
+        }
 
     } catch (error) {
         console.log(error);
