@@ -1,16 +1,21 @@
 import fetchPosts from "./auth/fetchPosts.mjs";
 import { postsUrl, fetchBtn, latestPosts, oldestPosts, fetchedDiv } from "./auth/constants.mjs";
 import redirectToNewPost from "./posts/redirectToNewPost.mjs";
+import logout from "./auth/logout.mjs";
 
 let postLimit = 5;
 let postOffset = 0;
 let sort = 'created';
 let sortOrder = 'desc';
 
+
+
 //something weird going on with sorting and button and sorting again
 redirectToNewPost();
 
 if (window.location.pathname !== '/newPost.html') {
+    logout();
+    
     fetchPosts(postsUrl, postLimit, postOffset, sort, sortOrder);
 
 fetchBtn.addEventListener('click', () => {

@@ -38,3 +38,5 @@ export const inputTitle = document.querySelector("#inputTitle");
 export const inputMedia = document.querySelector("#inputMedia");
 export const inputBody = document.querySelector("#inputBody");
 export const createPostBtn = document.querySelector("#createPostBtn");
+
+export const logoutBtn = document.querySelector("#logoutBtn");
