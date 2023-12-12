@@ -1,1 +1,3 @@
-//import login etc here
+import login from "./auth/login.mjs";
+
+login();
