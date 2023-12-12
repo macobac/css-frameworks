@@ -15,8 +15,6 @@ Course assignment on bootstrap
 
 - import login etc into index.mjs and change index.html link
 
-- make a logout btn
-
 In progress comments:
 
 //**something weird going on with sorting and button and sorting again - feed.mjs
