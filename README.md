@@ -13,6 +13,8 @@ Course assignment on bootstrap
 
 - fetchNewPost.mjs: fix error msg inside dom not in console
 
+- import login etc into index.mjs and change index.html link
+
 - make a logout btn
 
 In progress comments:
