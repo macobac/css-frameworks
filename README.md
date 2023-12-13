@@ -19,8 +19,6 @@ In progress comments:
 ## To-do list:
 
 - User can search the post content feed
-- User can view a post content item by ID
-
 - User can update a post content item
 - User can delete a post content item
 
@@ -52,3 +50,5 @@ Feeling fancy comments:
 - User can view a post content feed
 
 - User can create a post content item
+
+- User can view a post content item by ID
