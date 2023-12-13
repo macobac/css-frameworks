@@ -23,7 +23,9 @@ export default async function loginUser(url, userData) {
             const json = await response.json();
             const accessToken = json.accessToken;
             localStorage.setItem('accessToken', accessToken);
-            window.location.replace(`/feed.html`)
+            const currentUserName = json.name;
+            localStorage.setItem('currentUserName', currentUserName);
+            window.location.replace(`/feed.html`);
             return true;
         } else {
             const json = await response.json();
