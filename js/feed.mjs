@@ -8,9 +8,6 @@ let postOffset = 0;
 let sort = 'created';
 let sortOrder = 'desc';
 
-
-
-//something weird going on with sorting and button and sorting again
 redirectToNewPost();
 
 if (window.location.pathname !== '/newPost.html') {
