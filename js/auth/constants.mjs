@@ -41,3 +41,5 @@ export const inputBody = document.querySelector("#inputBody");
 export const createPostBtn = document.querySelector("#createPostBtn");
 
 export const logoutBtn = document.querySelector("#logoutBtn");
+
+export const onePostDiv = document.querySelector(".one-post-div");

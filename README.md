@@ -5,7 +5,7 @@ Course assignment on bootstrap
 
 ## In progress:
 
-- on profile.html navlinks dont work properly (for create post btn and logout)
+- on profile.html navlinks dont work properly (for create post btn and logout) - whats up with that
 
 - User can filter the post content feed ** NEED TO DO OVER AGAIN
 
@@ -17,7 +17,6 @@ Course assignment on bootstrap
 
 In progress comments:
 
-//**something weird going on with sorting and button and sorting again - feed.mjs
 
 
 ## To-do list:
