@@ -11,6 +11,7 @@ let sortOrder = 'desc';
 redirectToNewPost();
 
 if (window.location.pathname !== '/newPost.html') {
+    
     logout();
     
     fetchPosts(postsUrl, postLimit, postOffset, sort, sortOrder);
@@ -33,4 +34,3 @@ oldestPosts.addEventListener('click', () => {
 });
 
 }
-

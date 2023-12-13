@@ -21,6 +21,7 @@ export default async function displaySinglePost(post) {
     newDate.classList.add("postCreatedOn");
     const newAuthor = document.createElement("a");
     newAuthor.innerText = post.author.name;
+    newAuthor.setAttribute('id', post.author.name);
     newAuthor.href = `profile.html?name=${post.author.name}`; 
     newAuthor.classList.add("card-text", "post-author");
     newAuthor.addEventListener('click', (e) => {

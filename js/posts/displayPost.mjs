@@ -1,6 +1,5 @@
 import { fetchedDiv } from "../auth/constants.mjs";
 import formatDate from "../posts/formatDate.mjs";
-
 /**
  * 
  * @param {any} posts 
@@ -40,10 +39,23 @@ export default async function displayPost(posts) {
     if (newImg) {
         innerDiv.appendChild(newImg);
     };
+    
     innerDiv.appendChild(newAuthor);
     innerDiv.appendChild(newDate);
     innerDiv.appendChild(newTitle);
     innerDiv.appendChild(newBody);
     newDiv.appendChild(innerDiv);
     fetchedDiv.appendChild(newDiv);
+
+    const currentUser = localStorage.getItem('currentUserName');
+    if (posts.author.name === currentUser) {
+        const updateBtn = document.createElement("button");
+        updateBtn.innerText = `Update post`;
+        innerDiv.appendChild(updateBtn);
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerText = `Delete post`;
+        innerDiv.appendChild(deleteBtn);
+    } 
+
+    
 }
