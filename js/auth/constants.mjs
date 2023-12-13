@@ -17,6 +17,7 @@ export const loginForm = document.querySelector("#loginform");
 export const loginEmail = document.querySelector('#useremail');
 export const loginPassword = document.querySelector('#loginpassword');
 
+export const postSuccessMessage = `Your post has been posted.`
 export const regSuccessMessage = `Your registration was successful, you can now log in.`;
 export const genericErrorMessage = `An unexpected error occurred. Please try again later. If the error persists, contact us.`;
 

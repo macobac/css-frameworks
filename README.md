@@ -5,13 +5,13 @@ Course assignment on bootstrap
 
 ## In progress:
 
-- User can filter the post content feed **
+- User can filter the post content feed ** NEED TO DO OVER AGAIN
 
 - design so that on profile pg there is only imgs fetched in a 5x grid but when clicked on the posts u see 1 whole post
 
 - fix design on newPost.html
 
-- fetchNewPost.mjs: fix error msg inside dom not in console
+- fetchNewPost.mjs: maybe make a btn to profile here after post is posted? or to feed, or to look at post when i have fetched that later
 
 
 In progress comments:
