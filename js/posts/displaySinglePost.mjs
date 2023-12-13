@@ -1,40 +1,36 @@
-import { fetchedDiv } from "../auth/constants.mjs";
-import formatDate from "../posts/formatDate.mjs";
+import { onePostDiv } from "../auth/constants.mjs";
+import formatDate from "./formatDate.mjs";
 
 /**
  * 
  * @param {any} posts 
  */
-export default async function displayPost(posts) {
+export default async function displaySinglePost(post) {
     const newDiv = document.createElement("div");
     newDiv.classList.add("card", "my-3", "mx-auto");
     const innerDiv = document.createElement("div");
     innerDiv.classList.add("card-body");
     const newTitle = document.createElement("h2");
-    newTitle.innerText = posts.title;
+    newTitle.innerText = post.title;
     newTitle.classList.add("card-title");
-    newTitle.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.location.href = `singlePost.html?id=${posts.id}`;
-    })
     const newBody = document.createElement("p");
-    newBody.innerText = posts.body;
+    newBody.innerText = post.body;
     newBody.classList.add("card-text");
     const newDate = document.createElement("p");
-    newDate.innerText = formatDate(posts.created);
+    newDate.innerText = formatDate(post.created);
     newDate.classList.add("postCreatedOn");
     const newAuthor = document.createElement("a");
-    newAuthor.innerText = posts.author.name;
-    newAuthor.href = `profile.html?name=${posts.author.name}`; 
+    newAuthor.innerText = post.author.name;
+    newAuthor.href = `profile.html?name=${post.author.name}`; 
     newAuthor.classList.add("card-text", "post-author");
     newAuthor.addEventListener('click', (e) => {
         e.preventDefault();
         window.location.href = newAuthor.href;
     });
     let newImg;
-    if (posts.media) {
+    if (post.media) {
         newImg = document.createElement("img");
-        newImg.src = posts.media;
+        newImg.src = post.media;
         newImg.classList.add("card-img-top");
     };
     if (newImg) {
@@ -45,5 +41,5 @@ export default async function displayPost(posts) {
     innerDiv.appendChild(newTitle);
     innerDiv.appendChild(newBody);
     newDiv.appendChild(innerDiv);
-    fetchedDiv.appendChild(newDiv);
+    onePostDiv.appendChild(newDiv);
 }
