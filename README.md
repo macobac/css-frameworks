@@ -5,11 +5,8 @@ Course assignment on bootstrap
 
 ## In progress:
 
-- on profile.html navlinks dont work properly (for create post btn and logout) - whats up with that
 
 - User can filter the post content feed ** NEED TO DO OVER AGAIN
-
-- design so that on profile pg there is only imgs fetched in a 5x grid but when clicked on the posts u see 1 whole post
 
 
 - fetchNewPost.mjs: maybe make a btn to profile here after post is posted? or to feed, or to look at post when i have fetched that later
