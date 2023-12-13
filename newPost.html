@@ -12,31 +12,35 @@
     <div class="container bg-light bg-gradient">
         <nav class="navbar">
             <div class="container">
-                <a href="feed.html" class="navbar-brand"><img src="/images/purplelogo.png" alt="purple app logo" height="50px"></a>
+                <a href="feed.html" class="navbar-brand"><img src="/images/purplelogo.png" alt="purple app logo"
+                        height="50px"></a>
                 <button class="btn btn-outline-primary rounded-5" id="new-post-btn">+</button>
                 <div class="nav-item"><a href="profile.html" class="link-primary">Profile</a></div>
             </div>
         </nav>
-        <div class="container">
-            <form class="row align-items-end">
-                <div class="col">
-                    <label for="inputTitle" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="inputTitle">
+            <div class="container pb-5">
+                <div class="row my-3">
+                    <h2 class="text-primary-emphasis">Hi there! Lets share something with the purple community.</h2>
                 </div>
-                <div class="col">
-                    <label for="inputMedia" class="form-label">Media</label>
-                    <input type="text" class="form-control" id="inputMedia">
-                </div>
-                <div class="col">
-                    <label for="inputBody" class="form-label">Body</label>
-                    <input type="text" class="form-control" id="inputBody">
-                </div>
-                <div class="col">
-                    <button type="submit" class="btn btn-primary" id="createPostBtn">Create post</button>
-                </div>
-            </form>
+                <form class="row row-cols-1 g-2 align-items-end justify-content-center me-md-5">
+                    <div class="col">
+                        <label for="inputTitle" class="form-label text-primary">Title</label>
+                        <input type="text" class="form-control" id="inputTitle" name="inputTitle">
+                    </div>
+                    <div class="col">
+                        <label for="inputMedia" class="form-label text-primary">Media</label>
+                        <input type="text" class="form-control" id="inputMedia" name="inputMedia">
+                    </div>
+                    <div class="col">
+                        <label for="inputBody" class="form-label text-primary">Body</label>
+                        <textarea name="inputBody" class="form-control" id="inputBody" rows="5"></textarea>
+                    </div>
+                    <div class="col gy-3">
+                        <button type="submit" class="btn btn-outline-primary" id="createPostBtn">Create post</button>
+                    </div>
+                </form>
         </div>
-       
+
     </div>
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
