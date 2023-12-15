@@ -49,10 +49,12 @@ export default async function displaySinglePost(post) {
     if (post.author.name === currentUser) {
         const updateBtn = document.createElement("button");
         updateBtn.innerText = `Update post`;
+        updateBtn.classList.add("btn", "btn-outline-primary");
         innerDiv.appendChild(updateBtn);
         const deleteBtn = document.createElement("button");
         deleteBtn.innerText = `Delete post`;
+        deleteBtn.classList.add("btn", "btn-outline-primary");
         innerDiv.appendChild(deleteBtn);
-        deletePost(deleteBtn, post.id);
+        await deletePost(deleteBtn, post.id);
 }
 }
