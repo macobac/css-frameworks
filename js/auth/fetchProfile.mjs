@@ -23,7 +23,7 @@ export default async function fetchProfileData(userId) {
         const postsResponse = await fetch(`${profilesUrl}/${userId}/posts`, fetchOptions);
         const profilePosts = await postsResponse.json();
         for (let i = 0; i < profilePosts.length; i++) {
-            displayProfilePosts(profilePosts[i]);
+            displayProfilePosts(profilePosts[i], userId);
         };
     } catch (error) {
         console.error(error);
