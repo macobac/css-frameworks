@@ -1,19 +1,15 @@
-import { postsUrl } from "./constants.mjs";
+import fetchDeletePost from "./fetchDeletePost.mjs";
+import successMessage from "./successMessage.mjs";
+import errorMessage from "./errorMessage.mjs";
 
-export default async function deletePost(postId) {
-    try {
-        const token = localStorage.getItem('accessToken');
-        const fetchOptions = {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${token}`,
-            },
+export default async function deletePost(btn, id) {
+    btn.addEventListener('click', () => {
+        try { 
+            fetchDeletePost(id);
+            successMessage(btn, `Your post has been successfully deleted. Please refresh the page to see the changes made.`);
+        }
+        catch (error) {
+            errorMessage(error);
         };
-        const response = await fetch(`${postsUrl}/${postId}`, fetchOptions);
-        const json = await response.json();
-        return json;
-    } catch (error) {
-        console.log(error);
-    }
-}
+    });
+};

@@ -1,5 +1,7 @@
 import { fetchedDiv } from "../auth/constants.mjs";
 import formatDate from "../posts/formatDate.mjs";
+import deletePost from "../auth/deletePost.mjs";
+
 /**
  * 
  * @param {any} posts 
@@ -55,6 +57,7 @@ export default async function displayPost(posts) {
         const deleteBtn = document.createElement("button");
         deleteBtn.innerText = `Delete post`;
         innerDiv.appendChild(deleteBtn);
+        deletePost(deleteBtn, posts.id)
     } 
 
     
