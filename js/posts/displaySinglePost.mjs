@@ -43,4 +43,14 @@ export default async function displaySinglePost(post) {
     innerDiv.appendChild(newBody);
     newDiv.appendChild(innerDiv);
     onePostDiv.appendChild(newDiv);
+
+    const currentUser = localStorage.getItem('currentUserName');
+    if (post.author.name === currentUser) {
+        const updateBtn = document.createElement("button");
+        updateBtn.innerText = `Update post`;
+        innerDiv.appendChild(updateBtn);
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerText = `Delete post`;
+        innerDiv.appendChild(deleteBtn);
+}
 }
