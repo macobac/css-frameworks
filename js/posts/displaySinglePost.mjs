@@ -1,5 +1,6 @@
 import { onePostDiv } from "../auth/constants.mjs";
 import formatDate from "./formatDate.mjs";
+import deletePost from "../auth/deletePost.mjs";
 
 /**
  * 
@@ -52,5 +53,6 @@ export default async function displaySinglePost(post) {
         const deleteBtn = document.createElement("button");
         deleteBtn.innerText = `Delete post`;
         innerDiv.appendChild(deleteBtn);
+        deletePost(deleteBtn, post.id);
 }
 }

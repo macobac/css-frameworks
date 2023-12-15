@@ -12,7 +12,7 @@ Course assignment on bootstrap
 - fetchNewPost.mjs: maybe make a btn to profile here after post is posted? or to feed, or to look at post when i have fetched that later
 
 - User can update a post content item
-- User can delete a post content item
+
 
 In progress comments:
 
@@ -53,3 +53,5 @@ Feeling fancy comments:
 - User can create a post content item
 
 - User can view a post content item by ID
+
+- User can delete a post content item
