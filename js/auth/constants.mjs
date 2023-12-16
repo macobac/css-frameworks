@@ -48,3 +48,5 @@ export const submitUpdateBtn = document.querySelector("#submitUpdateBtn");
 export const inputUpdateTitle = document.querySelector("#inputUpdateTitle");
 export const inputUpdateMedia = document.querySelector("#inputUpdateMedia");
 export const inputUpdateBody = document.querySelector("#inputUpdateBody");
+
+export const appendBtnDiv = document.querySelector("#appendBtnDiv");

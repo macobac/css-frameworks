@@ -1,4 +1,4 @@
-import { createPostBtn, postSuccessMessage, genericErrorMessage } from "./constants.mjs";
+import { createPostBtn, postSuccessMessage, genericErrorMessage, appendBtnDiv } from "./constants.mjs";
 import successMessage from "./successMessage.mjs";
 import errorMessage from "./errorMessage.mjs";
 /**
@@ -23,7 +23,14 @@ export default async function fetchNewPost(url, userData) {
             inputBody.value = '';
             inputMedia.value = '';
             successMessage(createPostBtn, postSuccessMessage);
-            //maybe make a btn to profile here? or to feed
+            const redirectBtn = document.createElement('button');
+            redirectBtn.innerText = `Go to my profile`;
+            redirectBtn.classList.add("btn", "btn-primary");
+            appendBtnDiv.appendChild(redirectBtn);
+            redirectBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = `currentProfile.html`;
+            })
         } else {
             const json = await response.json();
             const apiErrorMessage = json.errors[0].message;
