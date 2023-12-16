@@ -14,13 +14,14 @@ Course assignment on bootstrap
 - User can update a post content item
 
 
+
 In progress comments:
 
-
+- User can search the post content feed
 
 ## To-do list:
 
-- User can search the post content feed
+
 
 
 To-do list comments:

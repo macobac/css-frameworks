@@ -43,3 +43,8 @@ export const createPostBtn = document.querySelector("#createPostBtn");
 export const logoutBtn = document.querySelector("#logoutBtn");
 
 export const onePostDiv = document.querySelector("#onePostDiv");
+
+export const submitUpdateBtn = document.querySelector("#submitUpdateBtn");
+export const inputUpdateTitle = document.querySelector("#inputUpdateTitle");
+export const inputUpdateMedia = document.querySelector("#inputUpdateMedia");
+export const inputUpdateBody = document.querySelector("#inputUpdateBody");

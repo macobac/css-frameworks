@@ -51,6 +51,10 @@ export default async function displaySinglePost(post) {
         updateBtn.innerText = `Update post`;
         updateBtn.classList.add("btn", "btn-outline-primary");
         innerDiv.appendChild(updateBtn);
+        updateBtn.addEventListener('click', () => {
+            const updateUrl = `updatePost.html?id=${post.id}&title=${encodeURIComponent(post.title)}&body=${encodeURIComponent(post.body)}&media=${encodeURIComponent(post.media)}`;
+            window.location.href = updateUrl;
+        })
         const deleteBtn = document.createElement("button");
         deleteBtn.innerText = `Delete post`;
         deleteBtn.classList.add("btn", "btn-outline-primary");

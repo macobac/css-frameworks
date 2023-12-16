@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Post</title>
+    <link rel="stylesheet" href="/dist/css/styles.css">
+</head>
+
+<body class="bg-primary-subtle bg-gradient">
+    <div class="container bg-light bg-gradient vh-100">
+        <nav class="navbar">
+            <div class="container">
+                <a href="feed.html" class="navbar-brand"><img src="/images/purplelogo.png" alt="purple app logo"
+                        height="50px"></a>
+                <div class="nav-item"><a href="feed.html" class="link-primary">Feed</a></div>
+                <button class="btn btn-outline-primary rounded-5" id="new-post-btn">+</button>
+                <div class="nav-item"><a href="currentProfile.html" class="link-primary">My Profile</a></div>
+                <button class="btn btn-link" id="logoutBtn">Logout</button>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row my-3">
+                <h2 class="text-primary-emphasis">Update your post</h2>
+            </div>
+            <form class="row row-cols-1 g-2 align-items-end justify-content-center me-md-5">
+                <div class="col">
+                    <label for="inputUpdateTitle" class="form-label text-primary">Title</label>
+                    <input type="text" class="form-control" id="inputUpdateTitle" name="inputUpdateTitle">
+                </div>
+                <div class="col">
+                    <label for="inputUpdateMedia" class="form-label text-primary">Media</label>
+                    <input type="text" class="form-control" id="inputUpdateMedia" name="inputUpdateMedia">
+                </div>
+                <div class="col">
+                    <label for="inputUpdateBody" class="form-label text-primary">Body</label>
+                    <textarea name="inputUpdateBody" class="form-control" id="inputUpdateBody" rows="5"></textarea>
+                </div>
+                <div class="col gy-3">
+                    <button type="submit" class="btn btn-outline-primary" id="cancelUpdateBtn">Cancel</button>
+                    <button type="submit" class="btn btn-outline-primary" id="submitUpdateBtn">Update post</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script type="module" src="js/updatePost.mjs"></script>
+</body>
+
+</html>
