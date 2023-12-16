@@ -8,9 +8,6 @@ Course assignment on bootstrap
 
 - User can filter the post content feed ** NEED TO DO OVER AGAIN
 
-
-- fetchNewPost.mjs: maybe make a btn to profile here after post is posted? or to feed, or to look at post when i have fetched that later
-
 - User can search the post content feed
 
 
